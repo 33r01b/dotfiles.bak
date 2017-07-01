@@ -1,5 +1,4 @@
 syntax on
-"filetype plugin on
 set path+=**
 set nocp
 set number
@@ -22,6 +21,7 @@ set wildmode=list:longest,list:full
 set showcmd
 set hidden
 set t_Co=256
+set colorcolumn=120
 
 let g:powerline_pycmd="py3"
 
@@ -64,6 +64,7 @@ filetype indent plugin on
 
 "color scheme
 colorscheme gruvbox
+highlight ColorColumn ctermbg=0
 set background=dark
 "set contrast for notebook
 "let g:gruvbox_contrast_dark='hard'
