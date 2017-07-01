@@ -17,7 +17,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-nnoremap <silent> <Space> :nohl<Bar>:echo<CR>
 set wildmenu
 set wildmode=list:longest,list:full
 set showcmd
@@ -26,61 +25,32 @@ set t_Co=256
 
 let g:powerline_pycmd="py3"
 
-"=====Vundle Settings======
+nnoremap <silent> <Space> :nohl<Bar>:echo<CR>
+
+"Для установки создайте каталог ~/.vim/bundle (можно использовать любое имя) и скопируйте туда vim_lib.
+"git clone https://github.com/Bashka/vim_lib.git ~/.vim/bundle/vim_lib
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+set rtp=~/.vim/bundle/vim_lib
+call vim_lib#sys#Autoload#init('~/.vim', 'bundle') " Адрес до вашего ~/.vim/bundle
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim_lib' "https://github.com/Bashka/vim_lib
+Plugin 'vim_prj' "https://github.com/Bashka/vim_prj
+Plugin 'vim_start' "https://github.com/Bashka/vim_start
+Plugin 'vim-fugitive' "https://github.com/tpope/vim-fugitive
+Plugin 'nerdtree' "https://github.com/scrooloose/nerdtree
+Plugin 'gruvbox' "https://github.com/morhetz/gruvbox
+Plugin 'auto-pairs' "https://github.com/jiangmiao/auto-pairs
+Plugin 'tern_for_vim' "https://github.com/ternjs/tern_for_vim 
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'morhetz/gruvbox'
-Plugin 'jiangmiao/auto-pairs'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
+filetype indent plugin on
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-"
-"
 "color scheme
 colorscheme gruvbox
 set background=dark
-"
-"
+
 " ==========NERD TREE conf==========
 "autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -104,3 +74,4 @@ call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
