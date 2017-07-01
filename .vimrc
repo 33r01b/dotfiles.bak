@@ -1,5 +1,5 @@
 syntax on
-filetype plugin on
+"filetype plugin on
 set path+=**
 set nocp
 set number
@@ -36,20 +36,33 @@ filetype off                  " required
 set rtp=~/.vim/bundle/vim_lib
 call vim_lib#sys#Autoload#init('~/.vim', 'bundle') " Адрес до вашего ~/.vim/bundle
 
-Plugin 'vim_lib' "https://github.com/Bashka/vim_lib
-Plugin 'vim_prj' "https://github.com/Bashka/vim_prj
-Plugin 'vim_start' "https://github.com/Bashka/vim_start
-Plugin 'vim-fugitive' "https://github.com/tpope/vim-fugitive
-Plugin 'nerdtree' "https://github.com/scrooloose/nerdtree
-Plugin 'gruvbox' "https://github.com/morhetz/gruvbox
-Plugin 'auto-pairs' "https://github.com/jiangmiao/auto-pairs
-Plugin 'tern_for_vim' "https://github.com/ternjs/tern_for_vim 
+Plugin 'vim_lib'
+Plugin 'vim_prj'
+Plugin 'vim_start' 
+Plugin 'vim-fugitive'
+Plugin 'nerdtree'
+Plugin 'gruvbox'
+Plugin 'auto-pairs'
+Plugin 'tern_for_vim'
+
+"Plugins repo
+"https://github.com/Bashka/vim_lib
+"https://github.com/Bashka/vim_prj
+"https://github.com/Bashka/vim_start
+"https://github.com/tpope/vim-fugitive
+"https://github.com/scrooloose/nerdtree
+"https://github.com/morhetz/gruvbox
+"https://github.com/jiangmiao/auto-pairs
+"https://github.com/ternjs/tern_for_vim 
+
 
 filetype indent plugin on
 
 "color scheme
 colorscheme gruvbox
 set background=dark
+"set contrast for notebook
+"let g:gruvbox_contrast_dark='hard'
 
 " ==========NERD TREE conf==========
 "autocmd vimenter * NERDTree
