@@ -37,6 +37,7 @@ set rtp=~/.vim/bundle/vim_lib
 call vim_lib#sys#Autoload#init('~/.vim', 'bundle') " Адрес до вашего ~/.vim/bundle
 
 Plugin 'vim_lib'
+Plugin 'vim_plugmanager'
 Plugin 'vim_prj'
 Plugin 'vim_start' 
 Plugin 'vim-fugitive'
@@ -47,6 +48,7 @@ Plugin 'tern_for_vim'
 
 "Plugins repo
 "https://github.com/Bashka/vim_lib
+"https://github.com/Bashka/vim_plugmanager
 "https://github.com/Bashka/vim_prj
 "https://github.com/Bashka/vim_start
 "https://github.com/tpope/vim-fugitive
