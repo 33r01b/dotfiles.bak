@@ -45,6 +45,7 @@ Plugin 'nerdtree'
 Plugin 'gruvbox'
 Plugin 'auto-pairs'
 Plugin 'tern_for_vim'
+Plugin 'vim-quickrun'
 
 "Plugins repo
 "https://github.com/Bashka/vim_lib
@@ -56,6 +57,7 @@ Plugin 'tern_for_vim'
 "https://github.com/morhetz/gruvbox
 "https://github.com/jiangmiao/auto-pairs
 "https://github.com/ternjs/tern_for_vim 
+"https://github.com/thinca/vim-quickrun
 
 
 filetype indent plugin on
