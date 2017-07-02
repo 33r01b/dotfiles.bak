@@ -46,6 +46,9 @@ Plugin 'gruvbox'
 Plugin 'auto-pairs'
 Plugin 'tern_for_vim'
 Plugin 'vim-quickrun'
+Plugin 'vmustache'
+Plugin 'ultisnips'
+Plugin 'pdv'
 
 "Plugins repo
 "https://github.com/Bashka/vim_lib
@@ -58,6 +61,9 @@ Plugin 'vim-quickrun'
 "https://github.com/jiangmiao/auto-pairs
 "https://github.com/ternjs/tern_for_vim 
 "https://github.com/thinca/vim-quickrun
+"https://github.com/tobyS/vmustache
+"https://github.com/SirVer/ultisnips
+"https://github.com/tobyS/pdv
 
 
 filetype indent plugin on
@@ -93,3 +99,6 @@ call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
+"PHPdoc
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
