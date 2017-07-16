@@ -7,9 +7,13 @@ set laststatus=2
 set fileencodings=utf8,cp1251
 set encoding=utf8
 set tabstop=4
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set expandtab
+set smarttab                                                                                                            
+set autoindent                                                                                                          
+set smartindent                                                                                                         
+set cindent    
 set ai
 set cin
 set hlsearch
