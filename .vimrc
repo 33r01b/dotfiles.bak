@@ -32,92 +32,82 @@ set re=1
 set ttyfast
 set lazyredraw
 set cursorline!
+set timeoutlen=100 
+set ttimeoutlen=0
 
 let base16colorspace=256  " Access colors present in 256 colorspace
 let g:powerline_pycmd="py3"
 
 nnoremap <silent> <Space> :nohl<Bar>:echo<CR>
+"set nocompatible              " be iMproved, required
+"filetype off                  " required
 
-"Для установки создайте каталог ~/.vim/bundle (можно использовать любое имя) и скопируйте туда vim_lib.
-"git clone https://github.com/Bashka/vim_lib.git ~/.vim/bundle/vim_lib
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-set rtp=~/.vim/bundle/vim_lib
-call vim_lib#sys#Autoload#init('~/.vim', 'bundle') " Адрес до вашего ~/.vim/bundle
-
-Plugin 'vim_lib'
-Plugin 'vim_plugmanager'
-Plugin 'vim_prj'
-Plugin 'vim_start' 
-Plugin 'vim-fugitive'
-Plugin 'nerdtree'
-Plugin 'gruvbox'
-Plugin 'auto-pairs'
-Plugin 'tern_for_vim'
-Plugin 'vim-quickrun'
-Plugin 'vmustache'
-Plugin 'ultisnips'
-Plugin 'pdv'
-Plugin 'twig.vim'
-Plugin 'nerdtree-git-plugin'
+"Plugin 'vim-fugitive'
+"Plugin 'nerdtree'
+"Plugin 'gruvbox'
+"Plugin 'auto-pairs'
+"Plugin 'tern_for_vim'
+"Plugin 'vim-quickrun'
+"Plugin 'vmustache'
+"Plugin 'ultisnips'
+"Plugin 'pdv'
+"Plugin 'twig.vim'
+"Plugin 'nerdtree-git-plugin'
+"Plugin 'vimwiki'
+"Plugin 'javascript-libraries-syntax.vim'
 "Plugin 'vim-javascript'
-Plugin 'vimwiki'
+"Plugin 'yajs.vim'
+"Plugin 'vim-jsx'
 
-"Plugins repo
-"https://github.com/Bashka/vim_lib
-"https://github.com/Bashka/vim_plugmanager
-"https://github.com/Bashka/vim_prj
-"https://github.com/Bashka/vim_start
-"https://github.com/tpope/vim-fugitive
-"https://github.com/scrooloose/nerdtree
-"https://github.com/morhetz/gruvbox
-"https://github.com/jiangmiao/auto-pairs
-"https://github.com/ternjs/tern_for_vim 
-"https://github.com/thinca/vim-quickrun
-"
-"???PHPDOC
-"https://github.com/tobyS/pdv
-"https://github.com/SirVer/ultisnips
-"https://github.com/tobyS/vmustache
-
-
-filetype indent plugin on
+"filetype indent plugin on
 
 "color scheme
 colorscheme gruvbox
 highlight ColorColumn ctermbg=0
 set background=dark
+"
 "set contrast for notebook
 "let g:gruvbox_contrast_dark='hard'
 
 " ==========NERD TREE conf==========
 "autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
-
-" NERDTress File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
 
 "set foldmethod=syntax
 
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
 
+let g:jsx_ext_required = 0
+let g:vim_jsx_pretty_enable_jsx_highlight = 1
+
+set conceallevel=1
+augroup javascript_folding
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+augroup END
+
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_arrow_function       = "⇒"
+let g:javascript_conceal_noarg_arrow_function = "🞅"
+let g:javascript_conceal_underscore_arrow_function = "🞅"
+
+let g:used_javascript_libs = 'react,vue,ramda,underscore'
+
+"maralla/completor.vim settings
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+let g:completor_node_binary = '/usr/bin/node'
