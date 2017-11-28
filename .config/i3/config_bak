@@ -11,8 +11,7 @@
 #force_xinerama yes
 #exec --no-startup-id dual-screen
 
-exec xrandr --output DP-0 --primary --left-of DVI-D-0
-#exec xrandr --output DP-0 --auto --primary --left-of DVI-D-0
+exec xrandr --output DP-0 --auto --primary --left-of DVI-D-0
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font

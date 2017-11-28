@@ -1,0 +1,96 @@
+[colors]
+
+# special
+foreground      = #c9c8ad
+foreground_bold = #c9c8ad
+cursor          = #c9c8ad
+background      = rgba(37, 31, 34, 0.96)
+#background      = #251f22
+
+# black
+color0  = #1e1e1e
+color8  = #5f5a60
+
+# red
+color1  = #cf6a4c
+color9  = #cf6a4c
+
+# green
+color2  = #8f9d6a
+color10 = #8f9d6a
+
+# yellow
+color3  = #f9ee98
+color11 = #f9ee98
+
+# blue
+color4  = #7587a6
+color12 = #7587a6
+
+# magenta
+color5  = #9b859d
+color13 = #9b859d
+
+# cyan
+color6  = #95aa94
+color14 = #b6ccaf
+
+# white
+color7  = #a7a7a7
+color15 = #ffffff
+
+[options]
+#font = Noto Mono 11
+#font = Monaco 11
+font = xos4 Terminus 12
+allow_bold = true
+
+[colors]
+# Base16 Flat
+# Author: Chris Kempson (http://chriskempson.com)
+
+foreground      = #e0e0e0
+foreground_bold = #f5f5f5
+cursor          = #f5f5f5
+#background      = #2C3E50
+background      = rgba(44, 62, 80, 0.97)
+
+# 16 color space
+
+# Black, Gray, Silver, White
+color0  = #2C3E50
+color8  = #95A5A6
+color7  = #e0e0e0
+color15 = #ECF0F1
+
+# Red
+color1  = #E74C3C
+color9  = #E74C3C
+
+# Green
+color2  = #2ECC71
+color10 = #2ECC71
+
+# Yellow
+color3  = #F1C40F
+color11 = #F1C40F
+
+# Blue
+color4  = #3498DB
+color12 = #3498DB
+
+# Purple
+color5  = #9B59B6
+color13 = #9B59B6
+
+# Teal
+color6  = #1ABC9C
+color14 = #1ABC9C
+
+# Extra colors
+color16 = #E67E22
+color17 = #be643c
+color18 = #34495E
+color19 = #7F8C8D
+color20 = #BDC3C7
+color21 = #f5f5f5

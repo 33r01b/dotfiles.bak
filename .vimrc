@@ -10,10 +10,10 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set smarttab                                                                                                            
-set autoindent                                                                                                          
-set smartindent                                                                                                         
-set cindent    
+set smarttab
+set autoindent
+set smartindent
+set cindent
 set ai
 set cin
 set hlsearch
@@ -26,7 +26,14 @@ set showcmd
 set hidden
 set t_Co=256
 set colorcolumn=120
+set clipboard=unnamedplus
+set relativenumber
+set re=1
+set ttyfast
+set lazyredraw
+set cursorline!
 
+let base16colorspace=256  " Access colors present in 256 colorspace
 let g:powerline_pycmd="py3"
 
 nnoremap <silent> <Space> :nohl<Bar>:echo<CR>
@@ -53,6 +60,10 @@ Plugin 'vim-quickrun'
 Plugin 'vmustache'
 Plugin 'ultisnips'
 Plugin 'pdv'
+Plugin 'twig.vim'
+Plugin 'nerdtree-git-plugin'
+"Plugin 'vim-javascript'
+Plugin 'vimwiki'
 
 "Plugins repo
 "https://github.com/Bashka/vim_lib
@@ -65,9 +76,11 @@ Plugin 'pdv'
 "https://github.com/jiangmiao/auto-pairs
 "https://github.com/ternjs/tern_for_vim 
 "https://github.com/thinca/vim-quickrun
-"https://github.com/tobyS/vmustache
-"https://github.com/SirVer/ultisnips
+"
+"???PHPDOC
 "https://github.com/tobyS/pdv
+"https://github.com/SirVer/ultisnips
+"https://github.com/tobyS/vmustache
 
 
 filetype indent plugin on
@@ -103,6 +116,8 @@ call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
-"PHPdoc
+"set foldmethod=syntax
+
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
+
