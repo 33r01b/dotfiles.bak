@@ -5,7 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ '
+PS1="\W \$ "
 
 alias ls='ls --color=auto'
 alias wifi-menu='sudo wifi-menu'
@@ -17,3 +18,4 @@ export TERMINAL=termite
 
 export EDITOR=vim
 export VISUAL=vim
+
