@@ -17,7 +17,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:xos4 Terminus 13px
+font pango: Terminus 13px
 #font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -224,9 +224,9 @@ gaps inner 6
 smart_gaps on
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse set Master 5%+ #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse set Master 5%- #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id  amixer -D pulse sset Master toggle # mute sound
 
 #locale toogle
 exec_always setxkbmap -layout us,ru -option "grp:caps_toggle,grp_led:caps"
@@ -241,7 +241,7 @@ bindsym --release shift+Print exec --no-startup-id "gnome-screenshot -f ~/Screen
 bindsym --release Print exec --no-startup-id "gnome-screenshot -a -f ~/Screenshots/$(date '+%F-%T').png"
 
 exec_always feh --bg-scale /home/zer0/Pictures/wall.jpeg
-bindsym $mod+d exec rofi -show run -lines 3 -bw 0 -font "xos4 Terminus 24px" -width 100 -padding 800
+bindsym $mod+d exec rofi -show run -lines 3 -bw 0 -font " Terminus 24px" -width 100 -padding 800
 exec --no-startup-id compton -f -D 2 -b
 
 ## Base16 Default Dark
