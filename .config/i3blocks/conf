@@ -39,8 +39,8 @@ label=VOL
 instance=Master
 #instance=PCM
 interval=1
-signal=10
-command=/usr/lib/i3blocks/volume 5 pulse
+signal=1
+command=amixer -D pulse get Master | grep -E -o '[0-9]{1,3}?%' | head -1
 
 # Memory usage
 #
