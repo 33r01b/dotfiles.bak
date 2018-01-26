@@ -12,6 +12,7 @@ alias ls='ls --color=auto'
 alias wifi-menu='sudo wifi-menu'
 alias emacs='emacs -nw'
 alias svim='sudo -E vim'
+alias vtodo='vim todo_$(date +%F).txt'
 
 export TERMINAL=termite
 #export TERMINAL=gnome-terminal
