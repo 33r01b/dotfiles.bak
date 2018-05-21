@@ -26,7 +26,8 @@ set showcmd
 set hidden
 set t_Co=256
 set colorcolumn=120
-set clipboard=unnamedplus
+set clipboard=unnamed,unnamedplus
+vnoremap y "+y
 set relativenumber
 set re=1
 set ttyfast
