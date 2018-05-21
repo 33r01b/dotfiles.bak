@@ -32,7 +32,7 @@ set relativenumber
 set re=1
 set ttyfast
 set lazyredraw
-"set cursorline!
+set cursorline!
 set timeoutlen=100 
 set ttimeoutlen=0
 
