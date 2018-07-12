@@ -15,15 +15,20 @@ export GIT_PS1_SHOWCOLORHINTS=true # Option for git-prompt.sh to show branch nam
 
 # Terminal Prompt:
 # Include git branch, use PROMPT_COMMAND (not PS1) to get color output (see git-prompt.sh for more)
-export PROMPT_COMMAND='__git_ps1 "| \w" "\n└─ $ "' # Git branch (relies on git-prompt.sh)
+export PROMPT_COMMAND='__git_ps1 "| \w" "\n└─ "' # Git branch (relies on git-prompt.sh)
 
 alias ls='ls --color=auto'
 alias wifi-menu='sudo wifi-menu'
 alias emacs='emacs -nw'
 alias svim='sudo -E vim'
 alias vtodo='vim todo_$(date +%F).txt'
+alias update='sudo apt update && apt list --upgradable'
+alias ssh='ssh -o "ServerAliveInterval 60"'
 
-export TERMINAL=termite
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export TERMINAL=konsole
+#export TERMINAL=termite
 #export TERMINAL=gnome-terminal
 
 export EDITOR=vim
