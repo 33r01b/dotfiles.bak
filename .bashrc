@@ -32,6 +32,11 @@ alias vtodo='vim todo_$(date +%F).txt'
 alias update='sudo apt update && apt list --upgradable'
 alias ssh='ssh -o "ServerAliveInterval 60"'
 
+# include .bashrc if it exists
+if [ -f $HOME/.bashrc_aliases ]; then
+    . $HOME/.bashrc_aliases
+fi
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export TERMINAL=konsole
