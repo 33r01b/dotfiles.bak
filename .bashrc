@@ -37,6 +37,10 @@ if [ -f $HOME/.bashrc_aliases ]; then
     . $HOME/.bashrc_aliases
 fi
 
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export TERMINAL=konsole
