@@ -17,3 +17,8 @@ function run_rancher {
         -p 80:80 -p 443:443 \
         rancher/rancher:latest
 }
+
+function ducon()
+{
+    docker exec -it --user $(id -u):$(id -g) $1 /bin/bash
+}
