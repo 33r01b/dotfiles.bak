@@ -216,6 +216,7 @@ hide_edge_borders both
 new_window pixel 1
 
 for_window [class="^.*"] border pixel 3
+for_window [class="^MonkeyDev*"] floating enable
 
 gaps inner 6
 smart_gaps on
