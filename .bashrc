@@ -13,3 +13,6 @@ source ~/.aliases
 source ~/.functions
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
+
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

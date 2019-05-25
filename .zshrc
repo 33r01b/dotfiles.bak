@@ -10,7 +10,8 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="kardan"
-ZSH_THEME="wezm"
+ZSH_THEME="candy"
+#ZSH_THEME="terminalparty"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -102,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.exports
 source ~/.aliases
 source ~/.functions
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
