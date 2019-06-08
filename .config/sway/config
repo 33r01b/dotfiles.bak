@@ -263,7 +263,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 }
 
 for_window [title="WorkTerm"] move to workspace 1
-for_window [class="Evolution"] move to workspace 4
+for_window [title="MailTerm"] move to workspace 4
 for_window [class="DBeaver"] move to workspace 5
 for_window [title="DBTerm"] move to workspace 5
 for_window [class="Firefox"] move to workspace 11
