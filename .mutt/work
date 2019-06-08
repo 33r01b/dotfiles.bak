@@ -1,0 +1,9 @@
+set folder = imaps://mail.tatar.ru/
+set imap_pass = $my_tatar_pass
+set imap_user = ruslan.samigullin@tatar.ru
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = +Sent
+
+## Hook -- IMPORTANT!
+account-hook $folder "set imap_user=ruslan.samigullin@tatar.ru imap_pass=$my_tatar_pass"
