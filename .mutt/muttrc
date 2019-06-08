@@ -21,3 +21,5 @@ set sidebar_visible
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
 bind index,pager \CN sidebar-toggle-visible
+
+set new_mail_command="notify-send 'New Email' '%n new messages, %u unread.' &"
