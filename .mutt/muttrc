@@ -1,0 +1,23 @@
+# https://wiki.archlinux.org/index.php/Mutt#Passwords_management
+# https://wiki.archlinux.org/index.php/GnuPG#Encrypt_and_decrypt
+source "gpg -dq $HOME/pwd.gpg |"
+source ./theme
+
+set folder = imaps://mail.tatar.ru/
+set imap_pass = $my_tatar_pass
+set imap_user = ruslan.samigullin@tatar.ru
+set spoolfile   = +INBOX
+mailboxes       = +INBOX
+set header_cache = ~/.cache/mutt
+set message_cachedir = "~/.cache/mutt"
+unset imap_passive
+set imap_keepalive = 300
+set mail_check = 120
+set mailcap_path = ~/.mutt/mailcap
+auto_view text/html
+source vim-keys.rc
+
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+bind index,pager \CN sidebar-toggle-visible

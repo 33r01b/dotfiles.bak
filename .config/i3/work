@@ -1,23 +1,13 @@
-for_window [title="WorkTerm"] move to workspace 1
-for_window [class="Evolution"] move to workspace 4
-for_window [class="DBeaver"] move to workspace 5
-for_window [title="DBTerm"] move to workspace 5
-for_window [class="Firefox"] move to workspace 6
-for_window [class="Chromium"] move to workspace 7
-for_window [class="Sublime_merge"] move to workspace 8
-for_window [class="TelegramDesktop"] move to workspace 9
-for_window [title="TelegramTerm"] move to workspace 9
-for_window [title="SyncTerm"] move to workspace 10
-
 exec --no-startup-id xinput disable Elan\ Touchpad
 
 exec alacritty --title "WorkTerm" -e $SHELL -c 'cd ~/langs/php/SEDv1-MSK/app && vim && $SHELL'
-exec alacritty --title "DBTerm" -e $SHELL -c 'vim -c "setlocal buftype=nofile | setlocal ft=sql | VipsqlOpenSession ""$*" && $SHELL'
+exec alacritty --title "DBTerm" -e $SHELL -c 'pgcli && $SHELL'
+#exec alacritty --title "DBTerm" -e $SHELL -c 'vim -c "setlocal buftype=nofile | setlocal ft=sql | VipsqlOpenSession ""$*" && $SHELL'
 exec alacritty --title "TelegramTerm"
 exec alacritty --title "SyncTerm" -e $SHELL -c 'cd ~/.lsyncd && $SHELL'
 exec telegram
 exec firefox
-exec chromium
+exec chromium --class="workBrowser"
 exec smerge
 exec evolution
-#eexec dbeaver
+#exec dbeaver
