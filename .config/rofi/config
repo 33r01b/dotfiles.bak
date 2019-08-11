@@ -2,7 +2,8 @@
 ! Base16 Flat
 ! Author: Chris Kempson (http://chriskempson.com)
 
-! base00: #2C3E50
+#! base00: #2C3E50
+! base00: #2c2f34
 ! base01: #34495E
 ! base02: #7F8C8D
 ! base03: #95A5A6
@@ -23,12 +24,12 @@
 rofi.color-enabled: true
 
 ! Property Name     BG       Border   Separator
-rofi.color-window:  #34495E, #34495E, #2C3E50
+rofi.color-window:  #1e2023, #34495E, #2C3E50
 
 ! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
-rofi.color-normal:  #34495E, #e0e0e0, #34495E, #34495E, #ECF0F1
-rofi.color-active:  #34495E, #3498DB, #34495E, #34495E, #3498DB
-rofi.color-urgent:  #34495E, #E74C3C, #34495E, #34495E, #E74C3C
+rofi.color-normal:  #1e2023, #e0e0e0, #1e2023, #1e2023, #ECF0F1
+rofi.color-active:  #1e2023, #3498DB, #1e2023, #1e2023, #3498DB
+rofi.color-urgent:  #1e2023, #E74C3C, #1e2023, #1e2023, #E74C3C
 
 ! Set the desired separator style
 rofi.separator-style: solid

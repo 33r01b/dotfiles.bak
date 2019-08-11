@@ -2,13 +2,13 @@ exec --no-startup-id xinput disable Elan\ Touchpad
 
 exec alacritty --title "WorkTerm" -e $SHELL -c 'cd ~/langs/php/SEDv1-MSK/app && vim && $SHELL'
 exec alacritty --title "MailTerm" -e $SHELL -c 'neomutt && $SHELL'
-#exec alacritty --title "DBTerm" -e $SHELL -c 'pgcli && $SHELL'
-#exec alacritty --title "DBTerm" -e $SHELL -c 'vim -c "setlocal buftype=nofile | setlocal ft=sql | VipsqlOpenSession ""$*" && $SHELL'
 exec alacritty --title "TelegramTerm"
 exec alacritty --title "SyncTerm" -e $SHELL -c 'cd ~/.lsyncd && $SHELL'
 exec telegram
 exec firefox
-exec chromium --class="workBrowser"
+exec chromium
 exec smerge
-exec evolution
+#exec evolution
+#exec alacritty --title "DBTerm" -e $SHELL -c 'pgcli && $SHELL'
+#exec alacritty --title "DBTerm" -e $SHELL -c 'vim -c "setlocal buftype=nofile | setlocal ft=sql | VipsqlOpenSession ""$*" && $SHELL'
 #exec dbeaver

@@ -204,21 +204,23 @@ bindsym $mod+Shift+x exec swaylock --color "$base01"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command i3blocks -c ~/.config/i3blocks/conf
-    position top
+    # status_command i3blocks -c ~/.config/i3blocks/conf
+    # position top
 
-    tray_padding 10
+    # tray_padding 10
 
-    colors {
-        separator   $base03
-        background  $base01b
-        statusline  $base03
-        #                   border       background   text
-        focused_workspace   $base01b     $base01b     $base07
-        active_workspace    $base01b     $base02      $base03
-        inactive_workspace  $base01b     $base01b     $base03
-        urgent_workspace    $base01b     $base01b     $base08
-    }
+    # colors {
+    #     separator   $base03
+    #     background  $base01b
+    #     statusline  $base03
+    #     #                   border       background   text
+    #     focused_workspace   $base01b     $base01b     $base07
+    #     active_workspace    $base01b     $base02      $base03
+    #     inactive_workspace  $base01b     $base01b     $base03
+    #     urgent_workspace    $base01b     $base01b     $base08
+    # }
+
+    swaybar_command waybar
 }
 
 default_border pixel 2

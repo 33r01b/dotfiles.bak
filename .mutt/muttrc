@@ -2,12 +2,14 @@
 auto_view text/html
 mailboxes       = +INBOX
 set header_cache = ~/.cache/mutt
-set imap_keepalive = 120
+set imap_keepalive = 60
 set mail_check = 90
 set mailcap_path = ~/.mutt/mailcap
 set message_cachedir = "~/.cache/mutt"
 source vim-keys.rc
 unset imap_passive
+set ssl_verify_host = no
+set ssl_verify_dates = no
 
 # sidebar
 set sidebar_visible

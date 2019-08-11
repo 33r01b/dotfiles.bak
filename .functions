@@ -15,3 +15,11 @@ nvm_init() {
 vipsql() {
     vim -c 'setlocal buftype=nofile | setlocal ft=sql | VipsqlOpenSession '"$*"
 }
+
+videocapture() {
+    ffmpeg -f x11grab -video_size 1920x1080 -framerate 25 -i $DISPLAY -c:v ffvhuff ${1}.mkv
+}
+
+videocapture_avi() {
+    ffmpeg -f x11grab -video_size 1920x1080 -framerate 25 -i $DISPLAY -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac ${1}.avi
+}
