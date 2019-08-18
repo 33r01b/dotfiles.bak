@@ -13,6 +13,12 @@
 
 #exec xrandr --output DP-0 --primary --left-of DVI-D-0
 #exec xrandr --output DP-0 --auto --primary --left-of DVI-D-0
+#exec xrandr --output eDP1 --auto --output HDMI2 --auto --panning 2560x1440 --right-of eDP1
+#exec xrandr --output eDP1 --auto --output HDMI2 --mode 2560x1440 --right-of eDP1
+#exec xrandr --output eDP1 --mode 1920x1080+0+0 --output HDMI2 --mode 2560x1440 --right-of eDP1
+
+#exec --no-startup-id xrandr --output eDP1 --auto --output HDMI2 --auto --panning 2560x1440+1920+0 --right-of eDP1 --auto
+ 
 
 # modifier = Alt, $sup = Wind0ws key
 set $mod Mod1
@@ -284,10 +290,10 @@ exec --no-startup-id compton -f -D 2 -b --unredir-if-possible
 
 for_window [title="WorkTerm"] move to workspace 1
 for_window [title="MailTerm"] move to workspace 4
-for_window [class="DBeaver"] move to workspace 5
+#for_window [class="DBeaver"] move to workspace 5
 for_window [title="DBTerm"] move to workspace 5
 for_window [class="Firefox"] move to workspace 11
-for_window [class="Chromium"] move to workspace 7
+#for_window [class="Chromium"] move to workspace 7
 for_window [class="Sublime_merge"] move to workspace 9
 for_window [class="TelegramDesktop"] move to workspace 10
 for_window [title="TelegramTerm"] move to workspace 10
