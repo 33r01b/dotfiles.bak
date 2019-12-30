@@ -4,7 +4,7 @@ export VISUAL=vim
 export PATH="${PATH}:$HOME/bin:$HOME/programs/arc/arcanist/bin"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-export GOPATH=$HOME/go:$HOME/langs/go
+export GOPATH=$HOME/go:$HOME/Go
 export PATH="$PATH:$HOME/go/bin"
 
 # --files: List files that would be searched but do not search
