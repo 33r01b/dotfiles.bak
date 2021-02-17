@@ -1,29 +1,7 @@
-dk_con () {
-    docker exec -it $1 bash
-}
-
-dk_con_alpine () {
-    docker exec -it $1 /bin/sh
-}
-
-nvm_init() {
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-}
-
-vipsql() {
-    vim -c 'setlocal buftype=nofile | setlocal ft=sql | VipsqlOpenSession '"$*"
-}
-
 videocapture() {
     ffmpeg -f x11grab -video_size 1920x1080 -framerate 25 -i $DISPLAY -c:v ffvhuff ${1}.mkv
 }
 
 videocapture_avi() {
     ffmpeg -f x11grab -video_size 1920x1080 -framerate 25 -i $DISPLAY -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac ${1}.avi
-}
-
-cw() {
-    cd ~/langs/php/epn/$1
 }

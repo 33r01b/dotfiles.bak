@@ -1,11 +1,8 @@
-export TERMINAL=termite
-export EDITOR=vim
-export VISUAL=vim
-export PATH="${PATH}:$HOME/bin:$HOME/programs/arc/arcanist/bin"
+export EDITOR=nvim
+export VISUAL=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1
-
 export GOPATH=$HOME/go
-export PATH="$PATH:$HOME/go/bin:$HOME/.symfony/bin"
+export PATH="$PATH:$HOME/go/bin"
 
 # --files: List files that would be searched but do not search
 # --no-ignore: Do not respect .gitignore, etc...
@@ -14,11 +11,4 @@ export PATH="$PATH:$HOME/go/bin:$HOME/.symfony/bin"
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
-# nvm
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#rustup
-#source $HOME/.cargo/env
 export NVIM_COC_LOG_LEVEL=debug
