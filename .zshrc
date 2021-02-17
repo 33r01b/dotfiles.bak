@@ -101,8 +101,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.exports
 source ~/.aliases
+source ~/.exports
 source ~/.functions
 
 powerline-daemon -q
